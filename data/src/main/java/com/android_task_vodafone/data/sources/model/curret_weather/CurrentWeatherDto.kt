@@ -1,5 +1,6 @@
-package com.android_task_vodafone.data.sources.model
+package com.android_task_vodafone.data.sources.model.curret_weather
 
+import com.android_task_vodafone.data.sources.model.shared.WeatherIconWithDescriptionDto
 import com.google.gson.annotations.SerializedName
 
 data class CurrentWeatherDto(

@@ -1,4 +1,4 @@
-package com.android_task_vodafone.data.sources.model
+package com.android_task_vodafone.data.sources.model.shared
 
 import com.google.gson.annotations.SerializedName
 

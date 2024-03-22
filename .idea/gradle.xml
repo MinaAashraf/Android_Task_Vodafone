@@ -30,6 +30,7 @@
             <option value="$PROJECT_DIR$/features/current_weather/presentation" />
             <option value="$PROJECT_DIR$/features/forecast" />
             <option value="$PROJECT_DIR$/features/forecast/domain" />
+            <option value="$PROJECT_DIR$/features/forecast/presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

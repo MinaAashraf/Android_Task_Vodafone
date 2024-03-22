@@ -25,6 +25,9 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/city_input" />
+            <option value="$PROJECT_DIR$/features/city_input/domain" />
+            <option value="$PROJECT_DIR$/features/city_input/presentation" />
             <option value="$PROJECT_DIR$/features/current_weather" />
             <option value="$PROJECT_DIR$/features/current_weather/domain" />
             <option value="$PROJECT_DIR$/features/current_weather/presentation" />

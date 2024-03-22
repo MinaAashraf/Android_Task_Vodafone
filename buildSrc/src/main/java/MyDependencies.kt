@@ -1,4 +1,5 @@
 import Versions.coroutinesVersion
+import Versions.dataStore_version
 import Versions.hiltVersion
 import Versions.lifecycle_version
 
@@ -8,6 +9,7 @@ object Versions {
     const val coroutinesVersion = "1.8.1-Beta"
     const val hiltVersion = "2.48"
     const val lifecycle_version = "2.7.0"
+    const val dataStore_version = "1.0.0"
 }
 
 object MyDependencies {
@@ -51,5 +53,8 @@ object MyDependencies {
     const val composeUiText = "androidx.compose.ui:ui-test-junit4"
     const val composeUiTooling = "androidx.compose.ui:ui-tooling"
     const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest"
+
+    //Datastore
+    const val dataStore ="androidx.datastore:datastore-preferences:$dataStore_version"
 
 }

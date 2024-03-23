@@ -3,19 +3,19 @@ on:
   push:
     branches : [ main ]
 
+
 jobs:
-  jobs:
-    lint:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4.1.2
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
 
-        - name: Setup Java JDK
-          uses: actions/setup-java@v4.2.1
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.2.1
 
-        - name: Run lint
-          run: ./gradlew lint
+      - name: Run lint
+        run: ./gradlew lint
 
   build:
     runs-on: ubunto-latest

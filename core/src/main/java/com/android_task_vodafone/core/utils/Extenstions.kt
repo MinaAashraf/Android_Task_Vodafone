@@ -7,9 +7,14 @@ import java.time.format.DateTimeFormatter
 
 @RequiresApi(Build.VERSION_CODES.O)
 fun String.formatDate(): String {
-    val dateValue = LocalDate.parse(this)
-    val formatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy")
-    return formatter.format(dateValue)
+  return  try {
+        val dateValue = LocalDate.parse(this)
+        val formatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy")
+      formatter.format(dateValue)
+    }catch (e:Exception){
+        this
+    }
+
 }
 
-fun String.generateUrlFromIconCode () = "https://cdn.weatherbit.io/static/img/icons/$this.png"
+fun String.generateUrlFromIconCode() = "https://cdn.weatherbit.io/static/img/icons/$this.png"

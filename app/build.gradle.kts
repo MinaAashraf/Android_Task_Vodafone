@@ -54,10 +54,12 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation(project(":core"))
     implementation(project(":data"))
-    implementation(project(":features:current_weather:presentation"))
+    implementation(project(":features:city_input:domain"))
     implementation(project(":features:forecast:domain"))
     implementation(project(":features:current_weather:domain"))
+    implementation(project(":features:city_input:presentation"))
     implementation(project(":features:forecast:presentation"))
+    implementation(project(":features:current_weather:presentation"))
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -66,6 +68,7 @@ dependencies {
     //Compose
     implementation(MyDependencies.composeActivity)
     implementation(platform(MyDependencies.composeBom))
+   // implementation(platform(MyDependencies.composeViewModel))
     implementation(MyDependencies.composeUi)
     implementation(MyDependencies.composeGraphics)
     implementation(MyDependencies.composePreview)
@@ -75,13 +78,18 @@ dependencies {
     debugImplementation(MyDependencies.composeUiTooling)
     debugImplementation(MyDependencies.composeUiTestManifest)
 
+
     // hilt
     implementation(MyDependencies.hilt)
+    implementation(MyDependencies.hiltWithCompose)
     kapt(MyDependencies.kapt)
 
     // Retrofit
     implementation(MyDependencies.retrofit)
     implementation(MyDependencies.gsonConverter)
+
+    // Navigation
+    implementation(MyDependencies.navigation)
 
 
 }

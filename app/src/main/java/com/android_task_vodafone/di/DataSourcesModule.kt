@@ -1,5 +1,7 @@
 package com.android_task_vodafone.di
 
+import com.android_task_vodafone.data.sources.local.datastore.CityNameDataSource
+import com.android_task_vodafone.data.sources.local.datastore.CityNameDataSourceImpl
 import com.android_task_vodafone.data.sources.remote.current_weather.CurrentWeatherDataSource
 import com.android_task_vodafone.data.sources.remote.current_weather.CurrentWeatherDataSourceImpl
 import com.android_task_vodafone.data.sources.remote.forecast.ForecastDataSource
@@ -17,5 +19,8 @@ interface DataSourcesModule {
 
     @Binds
     fun bindForecastDataSource(forecastDataSourceImpl: ForecastDataSourceImpl): ForecastDataSource
+
+    @Binds
+    fun bindCityNameDataSource(cityNameDataSourceImpl: CityNameDataSourceImpl): CityNameDataSource
 
 }

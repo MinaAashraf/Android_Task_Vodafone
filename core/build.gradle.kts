@@ -33,6 +33,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
+
 }
 
 dependencies {
@@ -44,6 +51,18 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    //Compose
+    implementation(MyDependencies.composeActivity)
+    implementation(platform(MyDependencies.composeBom))
+    implementation(MyDependencies.composeUi)
+    implementation(MyDependencies.composeGraphics)
+    implementation(MyDependencies.composePreview)
+    implementation(MyDependencies.composeMaterial3)
+    androidTestImplementation(platform(MyDependencies.composeBom))
+    androidTestImplementation(MyDependencies.composeUiText)
+    debugImplementation(MyDependencies.composeUiTooling)
+    debugImplementation(MyDependencies.composeUiTestManifest)
 
-
+    // Coil
+    implementation(MyDependencies.coil)
 }

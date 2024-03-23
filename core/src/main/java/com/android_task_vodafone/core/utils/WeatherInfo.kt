@@ -1,6 +1,6 @@
-package com.android_task_vodafone.features.current_weather.domain.model
+package com.android_task_vodafone.core.utils
 
-data class Weather(
+data class WeatherInfo(
     val time : String,
     val temp : Float,
     val humidity : Float,

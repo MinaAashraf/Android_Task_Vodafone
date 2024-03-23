@@ -72,6 +72,11 @@ dependencies {
     implementation(MyDependencies.hilt)
     kapt(MyDependencies.kapt)
 
+    // Navigation
+    implementation(MyDependencies.navigation)
+
+
+
 }
 kapt {
     correctErrorTypes = true

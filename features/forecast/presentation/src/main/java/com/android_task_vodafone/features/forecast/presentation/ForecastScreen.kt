@@ -6,9 +6,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 
 @Composable
-fun ForecastScreen(modifier: Modifier = Modifier, forecastUiState: ForecastUiState) {
+fun ForecastScreen(modifier: Modifier = Modifier, forecastUiState: ForecastUiState,
+                   navController: NavHostController,
+                   ) {
     Box(modifier.fillMaxSize()) {
         if (forecastUiState.errorMessage.isNullOrEmpty())
             Text(forecastUiState.forecast.toString())

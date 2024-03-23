@@ -1,7 +1,11 @@
+import Versions.coil_version
+import Versions.compose_viewmodel_version
 import Versions.coroutinesVersion
 import Versions.dataStore_version
 import Versions.hiltVersion
+import Versions.hilt_compose_verison
 import Versions.lifecycle_version
+import Versions.nav_version
 
 object Versions {
     const val versionRetrofit = "2.10.0"
@@ -10,12 +14,18 @@ object Versions {
     const val hiltVersion = "2.48"
     const val lifecycle_version = "2.7.0"
     const val dataStore_version = "1.0.0"
+    const val nav_version = "2.7.7"
+    const val hilt_compose_verison = "1.1.0"
+    const val compose_viewmodel_version = "2.6.1"
+    const val coil_version = "2.6.0"
+
 }
 
 object MyDependencies {
     // hilt
     const val hilt = "com.google.dagger:hilt-android:$hiltVersion"
     const val kapt = "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    const val hiltWithCompose =  "androidx.hilt:hilt-navigation-compose:$hilt_compose_verison"
 
     /* // hilt
 
@@ -46,6 +56,7 @@ object MyDependencies {
     // Compose
     const val composeActivity = "androidx.activity:activity-compose:1.7.0"
     const val composeBom = "androidx.compose:compose-bom:2023.08.00"
+    const val composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose"
     const val composeUi = "androidx.compose.ui:ui"
     const val composeGraphics = "androidx.compose.ui:ui-graphics"
     const val composePreview = "androidx.compose.ui:ui-tooling-preview"
@@ -55,6 +66,12 @@ object MyDependencies {
     const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest"
 
     //Datastore
-    const val dataStore ="androidx.datastore:datastore-preferences:$dataStore_version"
+    const val dataStore = "androidx.datastore:datastore-preferences:$dataStore_version"
+
+    // Navigation
+    const val navigation = "androidx.navigation:navigation-compose:$nav_version"
+    // Coil
+    const val coil = "io.coil-kt:coil-compose:$coil_version"
+
 
 }

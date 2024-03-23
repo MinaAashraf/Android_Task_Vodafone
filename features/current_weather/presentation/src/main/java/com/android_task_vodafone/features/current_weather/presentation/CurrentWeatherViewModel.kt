@@ -20,18 +20,14 @@ class CurrentWeatherViewModel @Inject constructor(private val getCurrentWeatherU
     private val _currentWeatherState: MutableStateFlow<CurrentWeatherState> = MutableStateFlow(CurrentWeatherState())
     val currentWeatherState: StateFlow<CurrentWeatherState> = _currentWeatherState.asStateFlow()
 
-    init {
-        getCurrentWeather()
-    }
-
-    private fun getCurrentWeather() {
+    fun getCurrentWeather(currentCityName : String) {
         _currentWeatherState.update {
             it.copy(
                 isLoading = true
             )
         }
         viewModelScope.launch(Dispatchers.IO) {
-            when (val result = getCurrentWeatherUseCase("Cairo")) {
+            when (val result = getCurrentWeatherUseCase(currentCityName)) {
                 is Result.Success -> _currentWeatherState.update {
                     it.copy(isLoading = false, currentWeather = result.data)
                 }

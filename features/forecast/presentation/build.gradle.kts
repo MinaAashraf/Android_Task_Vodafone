@@ -24,12 +24,12 @@ android {
                 "proguard-rules.pro"
             )
         }
-        buildFeatures {
-            compose = true
-        }
-        composeOptions {
-            kotlinCompilerExtensionVersion = "1.5.1"
-        }
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -71,6 +71,9 @@ dependencies {
     //ViewModel
     implementation(MyDependencies.viewModel)
     implementation(MyDependencies.lifeCycle)
+
+    // Navigation
+    implementation(MyDependencies.navigation)
 
 
 }

@@ -7,17 +7,18 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.runBlocking
 
 val Context.cityDataStore: DataStore<Preferences> by preferencesDataStore(name = DataStoreKeys.CITY_NAME_PREF)
 
-fun DataStore<Preferences>.getString(key: String): String? {
+fun DataStore<Preferences>.getStringFlow(key: String): Flow<String?> {
     val dataStore: DataStore<Preferences> = this
-    return runBlocking {
-        val booleanKey = stringPreferencesKey(key)
-        val result = dataStore.data.first()
-        result[booleanKey]
+    val stringKey = stringPreferencesKey(key)
+    return dataStore.data.map { preferences: Preferences ->
+        preferences[stringKey]
     }
 }
 

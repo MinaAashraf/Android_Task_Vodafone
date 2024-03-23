@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android_Task_Vodafone</string>
+    <string name="today">Today</string>
+    <string name="next_7_days">Next 7 days</string>
 </resources>

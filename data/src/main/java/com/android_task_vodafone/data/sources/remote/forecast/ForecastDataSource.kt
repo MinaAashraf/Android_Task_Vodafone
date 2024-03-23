@@ -1,8 +1,8 @@
 package com.android_task_vodafone.data.sources.remote.forecast
 
 import com.android_task_vodafone.core.utils.Result
-import com.android_task_vodafone.data.sources.model.forecast.ForecastDto
+import com.android_task_vodafone.data.sources.model.forecast.DailyForecastDto
 
 interface ForecastDataSource {
-    suspend fun getForecasts (citName:String) : Result<List<ForecastDto>>
+    suspend fun getForecast (citName:String) : Result<List<DailyForecastDto>>
 }

@@ -15,6 +15,7 @@ import androidx.navigation.navArgument
 import com.android_task_vodafone.CurrentWeatherWithSearchScreen
 import com.android_task_vodafone.features.city_input.presentation.CityInputViewModel
 import com.android_task_vodafone.features.current_weather.presentation.CurrentWeatherViewModel
+import com.android_task_vodafone.features.forecast.presentation.ForecastEvent
 import com.android_task_vodafone.features.forecast.presentation.ForecastScreen
 import com.android_task_vodafone.features.forecast.presentation.ForecastViewModel
 
@@ -47,9 +48,10 @@ fun MyApp(navController: NavHostController) {
         ) {
             val forecastViewModel: ForecastViewModel = hiltViewModel()
             val forecastUiState by forecastViewModel.forecastUiState.collectAsState()
+            val onEvent = {event : ForecastEvent -> forecastViewModel.OnEvent(event)}
             ForecastScreen(
                 forecastUiState = forecastUiState,
-                navController = navController,
+                onEvent = onEvent
             )
         }
     }

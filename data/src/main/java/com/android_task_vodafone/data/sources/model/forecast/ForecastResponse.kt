@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class ForecastResponse(
     @SerializedName("data")
-    val forecast : List<ForecastDto>?
+    val forecast : List<DailyForecastDto?>?
 )

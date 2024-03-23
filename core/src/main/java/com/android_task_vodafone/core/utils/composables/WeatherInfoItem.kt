@@ -29,7 +29,7 @@ import kotlin.math.roundToInt
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
-fun WeatherInfoItem(modifier: Modifier = Modifier, cityName: String, weather: WeatherInfo) {
+fun WeatherInfoItem(modifier: Modifier = Modifier, cityName: String? = null, weather: WeatherInfo) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -48,12 +48,14 @@ fun WeatherInfoItem(modifier: Modifier = Modifier, cityName: String, weather: We
                     .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = cityName,
-                    style = MaterialTheme.typography.headlineSmall,
-                    color = MaterialTheme.colorScheme.onPrimary
-                )
-                Spacer(modifier = modifier.height(5.dp))
+                if (!cityName.isNullOrEmpty()) {
+                    Text(
+                        text = cityName,
+                        style = MaterialTheme.typography.headlineSmall,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                    Spacer(modifier = modifier.height(5.dp))
+                }
                 Text(
                     text = weather.time.formatDate(),
                     style = MaterialTheme.typography.titleSmall,

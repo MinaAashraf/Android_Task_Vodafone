@@ -19,7 +19,6 @@ import com.android_task_vodafone.features.forecast.presentation.ForecastEvent
 import com.android_task_vodafone.features.forecast.presentation.ForecastScreen
 import com.android_task_vodafone.features.forecast.presentation.ForecastViewModel
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun MyApp(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavItem.CurrentWeatherWithSearch.route) {

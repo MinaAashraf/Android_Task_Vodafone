@@ -7,7 +7,6 @@ import com.android_task_vodafone.core.utils.formatDate
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
 import com.android_task_vodafone.data.sources.model.forecast.DailyForecastDto
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun DailyForecastDto.toDomain(): WeatherInfo {
     return WeatherInfo(
         time = time.formatDate(),
@@ -22,7 +21,6 @@ fun DailyForecastDto.toDomain(): WeatherInfo {
     )
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun List<DailyForecastDto>.toDomainList(): List<WeatherInfo> {
     return map { it.toDomain() }
 }

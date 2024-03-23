@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.android_task_vodafone.core.utils.composables.WeatherInfoItem
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun ForecastScreen(
     modifier: Modifier = Modifier,

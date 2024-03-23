@@ -14,7 +14,6 @@ import com.android_task_vodafone.core.utils.WeatherInfo
 import com.android_task_vodafone.core.utils.composables.WeatherInfoItem
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun CurrentWeatherScreen(
     modifier: Modifier = Modifier,
@@ -47,7 +46,6 @@ fun CurrentWeatherScreen(
 }
 
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
 fun PreviewCurrentWeatherScreen() {

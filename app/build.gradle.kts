@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.android_task_vodafone"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

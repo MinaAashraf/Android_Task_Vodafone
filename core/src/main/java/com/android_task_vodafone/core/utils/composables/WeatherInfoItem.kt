@@ -27,7 +27,6 @@ import com.android_task_vodafone.core.utils.formatDate
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
 import kotlin.math.roundToInt
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun WeatherInfoItem(modifier: Modifier = Modifier, cityName: String? = null, weather: WeatherInfo) {
     Column(
@@ -93,7 +92,6 @@ fun WeatherInfoItem(modifier: Modifier = Modifier, cityName: String? = null, wea
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
 fun PreviewWeatherInfoItem() {

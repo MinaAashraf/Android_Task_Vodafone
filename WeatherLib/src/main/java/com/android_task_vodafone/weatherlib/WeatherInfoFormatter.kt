@@ -6,7 +6,6 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 object WeatherInfoFormatter {
-        @RequiresApi(Build.VERSION_CODES.O)
         fun formatDate(time: String): String {
             return try {
                 val dateValue = LocalDate.parse(time)

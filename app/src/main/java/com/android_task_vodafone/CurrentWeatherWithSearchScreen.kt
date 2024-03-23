@@ -40,7 +40,6 @@ import com.android_task_vodafone.features.current_weather.presentation.CurrentWe
 import com.android_task_vodafone.navigation.NavArgument
 import com.android_task_vodafone.navigation.NavItem
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun CurrentWeatherWithSearchScreen(
     modifier: Modifier = Modifier,
@@ -96,7 +95,6 @@ fun CurrentWeatherWithSearchScreen(
 }
 
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Preview
 @Composable
 fun PreviewMainScreen() {

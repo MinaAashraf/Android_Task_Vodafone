@@ -5,7 +5,6 @@ import androidx.annotation.RequiresApi
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun String.formatDate(): String {
   return  try {
         val dateValue = LocalDate.parse(this)

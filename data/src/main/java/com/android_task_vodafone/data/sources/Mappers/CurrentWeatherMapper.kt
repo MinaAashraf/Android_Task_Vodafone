@@ -7,7 +7,6 @@ import com.android_task_vodafone.core.utils.formatDate
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
 import com.android_task_vodafone.data.sources.model.curret_weather.CurrentWeatherDto
 
-@RequiresApi(Build.VERSION_CODES.O)
 fun CurrentWeatherDto.toDomain(): WeatherInfo {
 
     return WeatherInfo(

@@ -16,9 +16,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+          cache: gradle
 
       - name: Run lint
         run: ./gradlew lint
+        continue-on-error: false
+
 
   build:
     runs-on: ubunto-latest

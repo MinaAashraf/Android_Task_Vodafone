@@ -19,17 +19,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient = OkHttpClient().newBuilder()
-        .addInterceptor {
-            val request = it.request().newBuilder()
-                .addHeader("key", API_KEY)
-                .build()
-            it.proceed(request)
-        }.build()
-
-    @Provides
-    @Singleton
-    fun provideRetrofit(client: OkHttpClient): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)

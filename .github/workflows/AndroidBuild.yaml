@@ -20,7 +20,3 @@ jobs:
         with:
           name: Android_Task_Vodafone.apk
           path: app/build/outputs/debug/app-debug.apk
-
-
-
-    - name:

@@ -48,10 +48,13 @@ fun MyApp(navController: NavHostController) {
         ) {
             val forecastViewModel: ForecastViewModel = hiltViewModel()
             val forecastUiState by forecastViewModel.forecastUiState.collectAsState()
-            val onEvent = {event : ForecastEvent -> forecastViewModel.OnEvent(event)}
+            val onEvent = {event : ForecastEvent -> forecastViewModel.onEvent(event)}
+            val cityName = it.arguments?.getString(NavArgument.CityNameArg.name)?:""
             ForecastScreen(
                 forecastUiState = forecastUiState,
+                cityName = cityName,
                 onEvent = onEvent
+
             )
         }
     }

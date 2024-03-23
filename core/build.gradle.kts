@@ -3,7 +3,8 @@ import org.gradle.api.artifacts.dsl.Dependencies
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -65,4 +66,18 @@ dependencies {
 
     // Coil
     implementation(MyDependencies.coil)
+
+
+    // hilt
+    implementation(MyDependencies.hilt)
+    kapt(MyDependencies.kapt)
+
+
+
 }
+
+
+kapt {
+    correctErrorTypes = true
+}
+

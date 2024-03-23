@@ -10,6 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
@@ -23,3 +24,4 @@ include(":features:current_weather:presentation")
 include(":features:forecast:presentation")
 include(":features:city_input:presentation")
 include(":features:city_input:domain")
+include(":WeatherLib")

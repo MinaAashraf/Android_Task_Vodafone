@@ -1,11 +1,14 @@
 import Versions.coil_version
 import Versions.compose_viewmodel_version
 import Versions.coroutinesVersion
+import Versions.coroutines_test_version
 import Versions.dataStore_version
 import Versions.hiltVersion
 import Versions.hilt_compose_verison
 import Versions.lifecycle_version
+import Versions.mockito_version
 import Versions.nav_version
+import Versions.weather_formatter_version
 
 object Versions {
     const val versionRetrofit = "2.10.0"
@@ -18,6 +21,10 @@ object Versions {
     const val hilt_compose_verison = "1.1.0"
     const val compose_viewmodel_version = "2.6.1"
     const val coil_version = "2.6.0"
+    const val mockito_version = "1.13.10"
+    const val coroutines_test_version = "1.8.1-Beta"
+    const val weather_formatter_version = "1.0"
+
 
 }
 
@@ -27,26 +34,13 @@ object MyDependencies {
     const val kapt = "com.google.dagger:hilt-android-compiler:$hiltVersion"
     const val hiltWithCompose =  "androidx.hilt:hilt-navigation-compose:$hilt_compose_verison"
 
-    /* // hilt
-
-     "com.google.dagger:hilt-android:2.48"
-     ksp("com.google.dagger:hilt-android-compiler:2.48")
-
-     const val hilt = "androidx.hilt:hilt-navigation-compose:1.1.0"
-
-     const val dataStore ="androidx.datastore:datastore-preferences:1.0.0"
- */
     // Coroutines
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
-    //  const val coroutinesPlayServices = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1"
 
     // Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.versionRetrofit}"
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.versionRetrofit}"
-
-    // Retrofit Coroutines Support
-    //const val retrofitCoroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$${Versions.versionRetrofitCoroutinesAdapter}"
 
 
     // ViewModel
@@ -73,5 +67,13 @@ object MyDependencies {
     // Coil
     const val coil = "io.coil-kt:coil-compose:$coil_version"
 
+    // Mockito
+    const val mockito = "io.mockk:mockk:$mockito_version"
+
+    // coroutines test
+    const val  coroutinesTest= "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_test_version"
+
+    // WeatherFormatter (my custom lib)
+    const val weatherFormatter = "com.weather:formatter:$weather_formatter_version"
 
 }

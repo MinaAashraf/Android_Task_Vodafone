@@ -60,6 +60,10 @@ dependencies {
 
     // DataStore
     implementation(MyDependencies.dataStore)
+
+    // WeatherFormatter (my custom local lib)
+    implementation(MyDependencies.weatherFormatter)
+
 }
 kapt {
     correctErrorTypes = true

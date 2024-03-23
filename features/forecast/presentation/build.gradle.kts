@@ -75,6 +75,12 @@ dependencies {
     // Navigation
     implementation(MyDependencies.navigation)
 
+    // Mockito
+    testImplementation(MyDependencies.mockito)
+
+    // Coroutines Test
+    testImplementation(MyDependencies.coroutinesTest)
+
 
 }
 kapt {

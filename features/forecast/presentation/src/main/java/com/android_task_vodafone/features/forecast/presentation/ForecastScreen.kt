@@ -22,10 +22,12 @@ import com.android_task_vodafone.core.utils.composables.WeatherInfoItem
 fun ForecastScreen(
     modifier: Modifier = Modifier,
     forecastUiState: ForecastUiState,
+    cityName : String,
     onEvent: (event: ForecastEvent) -> Unit
 ) {
+
     LaunchedEffect(Unit) {
-        onEvent(ForecastEvent.OnRefresh)
+        onEvent(ForecastEvent.OnRefresh(cityName))
     }
 
     Box(modifier.fillMaxSize()) {

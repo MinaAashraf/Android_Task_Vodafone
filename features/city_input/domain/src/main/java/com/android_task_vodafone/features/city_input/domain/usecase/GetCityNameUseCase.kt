@@ -5,6 +5,8 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetCityNameUseCase @Inject constructor(private val cityNameRepository: CityNameRepository) {
-     operator fun invoke(): Flow<String?> = cityNameRepository.getCityNameFromLocal()
+     operator fun invoke(): Flow<String?> =
+
+          cityNameRepository.getCityNameFromLocal()
 
 }

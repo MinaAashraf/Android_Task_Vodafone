@@ -2,7 +2,6 @@ package com.android_task_vodafone.features.forecast.domain.usecase
 
 import com.android_task_vodafone.core.utils.Result
 import com.android_task_vodafone.core.utils.WeatherInfo
-import com.android_task_vodafone.features.forecast.domain.model.Forecast
 import com.android_task_vodafone.features.forecast.domain.repository.ForecastRepository
 import javax.inject.Inject
 

@@ -37,6 +37,9 @@
 ## Ci/Cd :
 <img src="https://github.com/MinaAashraf/Android_Task_Vodafone/assets/48159614/361299ab-1e4d-4d6c-a575-fdad33cf1cf0">
 
+## Apk download
+    * https://drive.google.com/file/d/1sDO_ZZ2RU8SsnNrm-lcm1WQboUDvb_zb/view?usp=sharing
+
 
 
 

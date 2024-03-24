@@ -1,11 +1,11 @@
 package com.android_task_vodafone.di
 
-import com.android_task_vodafone.data.sources.local.datastore.CityNameDataSource
-import com.android_task_vodafone.data.sources.local.datastore.CityNameDataSourceImpl
-import com.android_task_vodafone.data.sources.remote.current_weather.CurrentWeatherDataSource
-import com.android_task_vodafone.data.sources.remote.current_weather.CurrentWeatherDataSourceImpl
-import com.android_task_vodafone.data.sources.remote.forecast.ForecastDataSource
-import com.android_task_vodafone.data.sources.remote.forecast.ForecastDataSourceImpl
+import com.android_task_vodafone.data.sources.source.local.datastore.CityNameDataSource
+import com.android_task_vodafone.data.sources.source.local.datastore.CityNameDataSourceImpl
+import com.android_task_vodafone.data.sources.source.remote.current_weather.CurrentWeatherDataSource
+import com.android_task_vodafone.data.sources.source.remote.current_weather.CurrentWeatherDataSourceImpl
+import com.android_task_vodafone.data.sources.source.remote.forecast.ForecastDataSource
+import com.android_task_vodafone.data.sources.source.remote.forecast.ForecastDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

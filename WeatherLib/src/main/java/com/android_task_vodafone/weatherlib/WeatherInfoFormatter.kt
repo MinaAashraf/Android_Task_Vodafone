@@ -17,9 +17,10 @@ object WeatherInfoFormatter {
 
         }
 
-        fun formatIconUrl(iconCode: String) =
-            "https://cdn.weatherbit.io/static/img/icons/$iconCode.png"
-
+        fun formatIconUrl(iconCode: String?) =
+            if (!iconCode.isNullOrEmpty())
+                "https://cdn.weatherbit.io/static/img/icons/$iconCode.png"
+            else iconCode
     }
 
 

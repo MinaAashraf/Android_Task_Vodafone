@@ -4,7 +4,7 @@ import android.util.Log
 import com.android_task_vodafone.core.utils.Result
 import com.android_task_vodafone.core.utils.WeatherInfo
 import com.android_task_vodafone.data.sources.Mappers.toDomainList
-import com.android_task_vodafone.data.sources.remote.forecast.ForecastDataSource
+import com.android_task_vodafone.data.sources.source.remote.forecast.ForecastDataSource
 import com.android_task_vodafone.features.forecast.domain.repository.ForecastRepository
 import javax.inject.Inject
 

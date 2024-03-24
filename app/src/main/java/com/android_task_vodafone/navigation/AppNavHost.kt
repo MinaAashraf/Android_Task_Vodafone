@@ -1,7 +1,5 @@
 package com.android_task_vodafone.navigation
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -24,14 +22,18 @@ fun MyApp(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavItem.CurrentWeatherWithSearch.route) {
 
         composable(route = NavItem.CurrentWeatherWithSearch.route) {
+
             val cityInputViewModel: CityInputViewModel = hiltViewModel()
-            val cityNameState by cityInputViewModel.cityNameState.collectAsState()
+            val currentCityState by cityInputViewModel.currentCityState.collectAsState()
+            val firstTimeState by cityInputViewModel.firstTimeState.collectAsState()
+
             val currentWeatherViewModel: CurrentWeatherViewModel = hiltViewModel()
             val currentWeatherState by currentWeatherViewModel.currentWeatherState.collectAsState()
 
             CurrentWeatherWithSearchScreen(
                 modifier = Modifier,
-                cityInputState = cityNameState,
+                currentCityState = currentCityState,
+                firstTimeState = firstTimeState,
                 onConfirmBtnClick = { searchQuery -> cityInputViewModel.storeCityName(searchQuery) },
                 currentWeatherState = currentWeatherState,
                 getCurrentWeatherEvent = { currentCityName ->
@@ -45,10 +47,12 @@ fun MyApp(navController: NavHostController) {
             route = "${NavItem.Forecast.route}/{${NavArgument.CityNameArg.name}}",
             arguments = listOf(navArgument(NavArgument.CityNameArg.name) { type = NavType.StringType })
         ) {
+
             val forecastViewModel: ForecastViewModel = hiltViewModel()
             val forecastUiState by forecastViewModel.forecastUiState.collectAsState()
             val onEvent = {event : ForecastEvent -> forecastViewModel.onEvent(event)}
             val cityName = it.arguments?.getString(NavArgument.CityNameArg.name)?:""
+
             ForecastScreen(
                 forecastUiState = forecastUiState,
                 cityName = cityName,

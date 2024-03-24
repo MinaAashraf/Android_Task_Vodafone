@@ -61,6 +61,13 @@ dependencies {
     // DataStore
     implementation(MyDependencies.dataStore)
 
+    // Mockito
+    testImplementation(MyDependencies.mockito)
+
+    // Coroutines Test
+    testImplementation(MyDependencies.coroutinesTest)
+
+
 
 }
 kapt {

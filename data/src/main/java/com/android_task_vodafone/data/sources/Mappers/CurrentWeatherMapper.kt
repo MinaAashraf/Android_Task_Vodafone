@@ -1,13 +1,11 @@
 package com.android_task_vodafone.data.sources.Mappers
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.android_task_vodafone.core.utils.WeatherInfo
 import com.android_task_vodafone.core.utils.formatDate
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
-import com.android_task_vodafone.data.sources.model.curret_weather.CurrentWeatherDto
+import com.android_task_vodafone.data.sources.model.data.CurrentWeatherDTO
 
-fun CurrentWeatherDto.toDomain(): WeatherInfo {
+fun CurrentWeatherDTO.toDomain(): WeatherInfo {
 
     return WeatherInfo(
         time = time.formatDate(),

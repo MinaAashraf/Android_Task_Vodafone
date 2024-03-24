@@ -1,13 +1,11 @@
 package com.android_task_vodafone.data.sources.Mappers
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.android_task_vodafone.core.utils.WeatherInfo
 import com.android_task_vodafone.core.utils.formatDate
 import com.android_task_vodafone.core.utils.generateUrlFromIconCode
-import com.android_task_vodafone.data.sources.model.forecast.DailyForecastDto
+import com.android_task_vodafone.data.sources.model.data.DailyForecastDTO
 
-fun DailyForecastDto.toDomain(): WeatherInfo {
+fun DailyForecastDTO.toDomain(): WeatherInfo {
     return WeatherInfo(
         time = time.formatDate(),
         temp = temp,
@@ -21,6 +19,6 @@ fun DailyForecastDto.toDomain(): WeatherInfo {
     )
 }
 
-fun List<DailyForecastDto>.toDomainList(): List<WeatherInfo> {
+fun List<DailyForecastDTO>.toDomainList(): List<WeatherInfo> {
     return map { it.toDomain() }
 }

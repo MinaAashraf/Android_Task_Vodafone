@@ -1,6 +1,4 @@
 package com.android_task_vodafone.features.current_weather.presentation
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -18,13 +16,13 @@ import com.android_task_vodafone.core.utils.generateUrlFromIconCode
 fun CurrentWeatherScreen(
     modifier: Modifier = Modifier,
     currentWeatherState: CurrentWeatherState,
-    currentCityName: String,
+    currentCityState: String,
     getCurrentWeatherEvent: (cityName: String) -> Unit,
 ) {
 
-    LaunchedEffect(currentCityName) {
-        if (currentCityName.isNotEmpty())
-            getCurrentWeatherEvent(currentCityName)
+    LaunchedEffect(currentCityState) {
+        if (currentCityState.isNotEmpty())
+            getCurrentWeatherEvent(currentCityState)
     }
 
     if (currentWeatherState.isLoading)
@@ -38,7 +36,7 @@ fun CurrentWeatherScreen(
     else if (currentWeatherState.currentWeather != null) {
         WeatherInfoItem(
             modifier = modifier,
-            cityName = currentCityName,
+            cityName = currentCityState,
             weather = currentWeatherState.currentWeather
         )
     }
@@ -63,6 +61,6 @@ fun PreviewCurrentWeatherScreen() {
                 description = ""
             ),
         ),
-        currentCityName = "Ciro"
+        currentCityState = "Ciro"
     ) {}
 }

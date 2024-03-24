@@ -7,6 +7,6 @@ data class WeatherInfo(
     val windSpeed: Float = 0f,
     val pressure: Float = 0f,
     val cityName: String = "",
-    val iconUrl: String = "",
+    val iconUrl: String? = null,
     val description: String = ""
 )

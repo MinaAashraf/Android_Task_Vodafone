@@ -6,14 +6,17 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 fun String.formatDate(): String {
-  return  try {
+    return try {
         val dateValue = LocalDate.parse(this)
         val formatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy")
-      formatter.format(dateValue)
-    }catch (e:Exception){
+        formatter.format(dateValue)
+    } catch (e: Exception) {
         this
     }
 
 }
 
-fun String.generateUrlFromIconCode() = "https://cdn.weatherbit.io/static/img/icons/$this.png"
+fun String?.generateUrlFromIconCode(): String? =
+    if (!this.isNullOrEmpty())
+        "https://cdn.weatherbit.io/static/img/icons/$this.png"
+    else this

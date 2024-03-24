@@ -3,7 +3,7 @@ package com.android_task_vodafone.data.sources.repository.current_weather
 import com.android_task_vodafone.core.utils.Result
 import com.android_task_vodafone.core.utils.WeatherInfo
 import com.android_task_vodafone.data.sources.Mappers.toDomain
-import com.android_task_vodafone.data.sources.remote.current_weather.CurrentWeatherDataSource
+import com.android_task_vodafone.data.sources.source.remote.current_weather.CurrentWeatherDataSource
 import com.android_task_vodafone.features.current_weather.domain.repository.CurrentWeatherRepository
 import javax.inject.Inject
 

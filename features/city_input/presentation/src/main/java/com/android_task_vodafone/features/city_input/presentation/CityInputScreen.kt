@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.FilledIconButton
@@ -28,6 +30,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -41,14 +45,15 @@ fun CityInputScreen(
     Box(
         Modifier
             .background(Color.Transparent)
-            .shadow(5.dp,MaterialTheme.shapes.large),) {
+            .shadow(5.dp, MaterialTheme.shapes.large),
+    ) {
         TextField(
             modifier = modifier
                 .fillMaxWidth()
                 .height(60.dp),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.White,
-                focusedContainerColor = Color.LightGray,
+                focusedContainerColor = Color.White,
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent,
             ),
@@ -58,14 +63,19 @@ fun CityInputScreen(
             onValueChange = { searchQuery = it },
             placeholder = { Text(text = stringResource(R.string.city_name)) },
             maxLines = 1,
-
+            keyboardActions = KeyboardActions(
+                onSearch = { onConfirmBtnClick(searchQuery) }
+            ),
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Text, imeAction = ImeAction.Search
+            ),
             trailingIcon = {
                 FilledIconButton(
                     modifier = modifier.size(25.dp),
                     onClick = { onConfirmBtnClick(searchQuery) },
                     colors = IconButtonDefaults.iconButtonColors(
                         containerColor = MaterialTheme.colorScheme.primary.copy(
-                            alpha = 0.5f
+                            alpha = 0.3f
                         )
                     )
                 ) {
@@ -73,7 +83,7 @@ fun CityInputScreen(
                         imageVector = Icons.Default.Search,
                         contentDescription = "",
                         Modifier.size(17.dp),
-                        tint = Color.Black
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 }
             }
